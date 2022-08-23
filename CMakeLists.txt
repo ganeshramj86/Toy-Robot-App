@@ -1,0 +1,29 @@
+#
+cmake_minimum_required(VERSION 3.13)
+
+project(demo)
+add_library(${PROJECT_NAME} INTERFACE)
+
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_EXTENSIONS Off)
+set(CMAKE_CXX_STANDARD_REQUIRED On)
+set(CMAKE_EXPORT_COMPILE_COMMANDS On)
+
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/config/cmake")
+
+# Project configuration
+enable_testing()
+include(CTest)
+
+# include(add-targets)
+
+# find_package(Catch2 CONFIG REQUIRED)
+
+#include_directories(include)
+
+add_subdirectory(toyrobotlib)
+add_subdirectory(test)
+add_subdirectory(simulation)
+
+# add the executable
+#add_executable(TOYROBOT toy_robot.cxx)

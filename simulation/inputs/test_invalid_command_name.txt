@@ -1,0 +1,10 @@
+PLCE 0,0,NORTH
+LFT
+RGHT
+MVE
+REPT
+place 0,0,NORTH
+left
+right
+move
+report

@@ -7,7 +7,7 @@
 namespace commandhandler {
 
     // This function is used to trim the whitespace (both front and back) in command string
-    auto stringTrim(std::string str) -> std::string {
+    auto stringTrim(std::string const& str) -> std::string {
         auto str_begin = str.find_first_not_of(" ");
         if (str_begin == std::string::npos) {
             return "";
@@ -21,15 +21,15 @@ namespace commandhandler {
     // This functions is used to retieve the command name from command string
     auto getCommandName(std::string const& command_str) -> std::string {
         auto find_space = command_str.find(" ");
-        std::string command_name;
+        //std::string command_name;
         if (find_space != std::string::npos) {
-            command_name = command_str.substr(0, find_space);
+            return command_str.substr(0, find_space);
         }
         else {
-            command_name = command_str;
+            return command_str;
         }
 
-        return command_name;
+        //return command_name;
     }
 
     // This function is used to check if command name is a valid command
@@ -66,7 +66,8 @@ namespace commandhandler {
             return false;
         }
         
-        char* place_cmd_str = &place_command_str[0];
+        //char* place_cmd_str = &place_command_str[0];
+        auto place_cmd_str = &place_command_str[0];
         char *token = strtok(place_cmd_str, " ");
 
         std::string command_name(token);

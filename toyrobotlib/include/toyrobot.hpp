@@ -18,7 +18,7 @@ namespace iress {
     public:
         ToyRobot() noexcept;
         ~ToyRobot() = default;
-        auto runCommands(std::string, std::ostream& outputStream = std::cout) -> void;
+        auto runCommands(std::string const&, std::ostream& outputStream = std::cout) -> void;
         auto executePlaceCommand(std::string) -> void;
         auto executeMoveCommand() -> bool;
         auto executeRotation(const std::string&) -> void;

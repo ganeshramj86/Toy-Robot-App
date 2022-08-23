@@ -104,7 +104,7 @@ namespace iress {
     }
 
     // This function reads the input line by line and execute all the commands found
-    auto iress::ToyRobot::runCommands(std::string input, std::ostream& outputStream) -> void {
+    auto iress::ToyRobot::runCommands(std::string const& input, std::ostream& outputStream) -> void {
         std::fstream newFile;
         newFile.open(input);
 

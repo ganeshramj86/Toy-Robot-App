@@ -4,7 +4,7 @@
 #include <iostream>
 
 namespace commandhandler {
-    auto stringTrim(std::string) -> std::string;
+    auto stringTrim(std::string const&) -> std::string;
     auto isValidCommandName(std::string const&) -> bool;
     auto getCommandName(std::string const&) -> std::string;
     auto isValidPositionArgument(std::string const&, const int&, const int&) -> bool;

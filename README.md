@@ -52,17 +52,24 @@ toy robot states. Finally, a config file is used to declare and define all the g
 The app utilizes CMake software for compiling, building and testing the app. The app has been successfully tested across different operating systems 
 (Windows and Linux), across different compilers (GCC and Clang compilers) and across IDE (Integrated Developent Environment) and CLI (Command Line Interface).
 
+First Clone the project from the github using the below command to your desired location:
+
+git clone https://github.com/ganeshramj86/Toy-Robot-App.git
+
 ### Windows Setup and Run
 In order to setup, first a suitable GCC compiler has to be installed in the system. For Windows MinGW, MSYS and Clang are available compilers to build this app.
 For reference on installing and setting environment path for MinGW and MSYS, the following links are useful:
+
 https://www.geeksforgeeks.org/installing-mingw-tools-for-c-c-and-changing-environment-variable/
+
 https://docs.epics-controls.org/projects/how-tos/en/latest/getting-started/installation-windows-msys2.html
+
 
 Further instructions assume that a suitable GCC compiler like MinGW or MSYS is installed in a Windows 10 based computer and corresponding system environment variables
 are set. The app was tested on Windows 10 under MinGW (GCC 9.2.0 mingw32) and under MSYS2.0(GCC 11.2.0 x86_64-w64-mingw32).
 
 #### Steps for Command Line (Windows):
-1. Open a command prompt or windows terminal and cd to toyrobotapp folder
+1. Open a command prompt or windows terminal and cd to Toy-Robot-App folder
 2. Create build folder: 
 
     mkdir build
@@ -146,18 +153,21 @@ are set. The app was tested on Windows 10 under MinGW (GCC 9.2.0 mingw32) and un
 
 ### Linux Setup and Run
 In order to install a compiler such as GCC or Clang on Linux, the following links will be useful.
+
 https://www.geeksforgeeks.org/how-to-install-gcc-compiler-on-linux/
+
 https://clang.llvm.org/get_started.html
 
 Also, Ninja, a small build system with a focus on speed, was used to build the project on Linux. The pre built Ninja packages can be installed using systems's
 package manager as shwon in the link below:
+
 https://github.com/ninja-build/ninja/wiki/Pre-built-Ninja-packages
 
 Further instructions assume that a suitable compiler like GCC or Clang and Ninja build system is installed in a Unix/ Linux based computer and corresponding system environment variables
 are set. The app was tested on Xcef desktop under GNU GCC (GCC 10.2.1 x86_64-linux-gnu) and under Clang (Clang 11.0.1 x86_64-pc-linux-gnu).
 
 #### Steps for Command Line (Linux):
-1. Open a terminal and cd to toyrobotapp folder
+1. Open a terminal and cd to Toy-Robot-App folder
 2. Create build folder:
 
     mkdir build
